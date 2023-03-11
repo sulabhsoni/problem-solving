@@ -6,16 +6,11 @@
         int end = numbers.size()-1;
         while(start<end)
         {
-            if((numbers.get(start) + numbers.get(end)) < target)
-            {
-                start++;
-            }
-            else if((numbers.get(start) + numbers.get(end)) > target)
-            {
-                end--;
-            }
-            else
-            {
+            if((numbers.get(start) + numbers.get(end)) < target) start++;
+            
+            else if((numbers.get(start) + numbers.get(end)) > target) end--;
+            
+            else { 
                 result.add(start);
                 result.add(end);
                 return result;
